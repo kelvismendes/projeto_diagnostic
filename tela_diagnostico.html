@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/tela_diagnostico.css">
+	<link rel="stylesheet" href="css/style_modal.css">
+	<link rel="stylesheet" href="css/balao.css">
+	<link rel="stylesheet" href="css/botoes_para_testar_funcoes.css"> <!-- APAGAR DPS  -->
+	<script src="js/teste_funcoes.js"></script> <!-- APAGAR DPS  -->
+	<script>
+		function redirecionar(){
+			document.location.href="duvidas.html";	
+		}
+	</script>
+</head>
+<body>
+	<div class="btn_teste">
+		<button class="btn_f cor1">func 1</button>
+		<button class="btn_f cor2">func 2</button>
+		<button class="btn_f cor3">func 3</button>
+	</div>
+	<div class="balao"><p>Clique Nas Caixas para Obter Mais informações</p></div>
+	<div class="navbar">
+			<div class="icone item_alinhar">Diagnostic</div>
+			<div class="suporte item_alinhar" onclick="redirecionar()">Alguma Dúvida?</div>
+	</div>	
+	<div class="container">
+		
+			
+		<div class="container_visor">
+
+			<div id="modalBtn" class="box" style="border:1px solid #58CFD2;background-color:#fff">
+				<span class="porcentagem">90%</span>
+				<span class="titulo_doenca">Chagas</span>
+			</div>
+			<div class="box" style="border:1px solid #58CFD2;background-color:#fff">
+				<span class="porcentagem">85%</span>
+				<span class="titulo_doenca">Dengue</span>
+			</div>
+			<div class="box" style="border:1px solid #58CFD2 ;background-color:#fff">
+				<span class="porcentagem">45%</span>
+				<span class="titulo_doenca">HEPATITE B</span>
+			</div>
+			<div class="box" style="border:1px solid #58CFD2;background-color:#fff">
+				<span class="porcentagem">20%</span>
+				<span class="titulo_doenca">HIV</span>
+			</div>
+
+		</div>
+		<button class="identificador" >Sintomas Adicionados</button>
+		<div class="container_sintomas_adicionados">
+			<table class="tb_sintomas_adiconados">
+				
+				<tr>
+					<td class="td_sint_add" id="0a">FEBRE</td>
+					<td class="td_sint_add" id="1a">DOR DE CABEÇA</td>
+					<td class="td_sint_add" id="2a">TOSSE</td>
+					<td class="td_sint_add" id="3a">MANCHAS NA PELE</td>
+					<td class="td_sint_add" id="4a">ESPIRROS</td>
+					<td class="td_sint_add" id="5a">DOR MUSCULAR</td>
+					<td class="td_sint_add" id="6a">FALTA DE AR</td>
+				</tr>
+				<tr>
+					<td class="td_sint_add" id="7a">Enjoo</td>
+					<td class="td_sint_add" id="8a">Sede</td>
+					<td class="td_sint_add" id="9a">Diarreia</td>
+					<td class="td_sint_add" id="10a">Vômitos</td>
+					<td class="td_sint_add" id="11a">Dores abdominais</td>
+					<td class="td_sint_add" id="12a">DOR MUSCULAR</td>
+					<td class="td_sint_add" id="13a">Dor atrás dos olhos</td>
+				</tr>
+				<tr>
+					<td class="td_sint_add" id="14a">Febre maior que 39°C</td>
+					<td class="td_sint_add" id="15a">Conjuntivite</td>
+					<td class="td_sint_add" id="16a">Dores no corpo</td>
+					<td class="td_sint_add" id="17a">MANCHAS NA PELE</td>
+					<td class="td_sint_add" id="18a">Febre moderada</td>
+					<td class="td_sint_add" id="19a">Manchas que coçam</td>
+					<td class="td_sint_add" id="20a">Perda de apetite</td>
+				</tr>
+				<tr>
+					<td class="td_sint_add" id="21a">Dor de ouvido</td>
+					<td class="td_sint_add" id="22a">Dor facial</td>
+					<td class="td_sint_add" id="23a">Congestão nasal</td>
+					<td class="td_sint_add" id="24a">Ardência  ao urinar</td>
+					<td class="td_sint_add" id="25a">Urina Espumando</td>
+
+						<td colspan="2" style="background-color: #E42F32;border:0;color:#fff;padding:8px 8px 10px 10px;" onclick="resetarSintomas()">LIMPAR TODOS </td>
+				</tr>
+					
+					
+			</table>
+		</div>
+		
+		<div class="container_sintomas_disponiveis">
+
+			<div class="btn"><span>Sintomas Disponiveis</span> <input type="text" placeholder="buscar sintoma"></div>
+
+			<table class="tb_sintomas_disponiveis">
+				<tr>
+					<td class="td_sint_disp" id="0">FEBRE</td>
+					<td class="td_sint_disp" id="1">DOR DE CABEÇA</td>
+					<td class="td_sint_disp" id="2">TOSSE</td>
+					<td class="td_sint_disp" id="3">MANCHAS NA PELE</td>
+					<td class="td_sint_disp" id="4">ESPIRROS</td>
+					<td class="td_sint_disp" id="5">DOR MUSCULAR</td>
+					<td class="td_sint_disp" id="6">FALTA DE AR</td>
+				</tr>
+				<tr>
+					<td class="td_sint_disp" id="7">Enjoo</td>
+					<td class="td_sint_disp" id="8">Sede</td>
+					<td class="td_sint_disp" id="9">Diarreia</td>
+					<td class="td_sint_disp" id="10">Vômitos</td>
+					<td class="td_sint_disp" id="11">Dores abdominais</td>
+					<td class="td_sint_disp" id="12">DOR MUSCULAR</td>
+					<td class="td_sint_disp" id="13">Dor atrás dos olhos</td>
+				</tr>
+				<tr>
+					<td class="td_sint_disp" id="14">Febre maior que 39°C</td>
+					<td class="td_sint_disp" id="15">Conjuntivite</td>
+					<td class="td_sint_disp" id="16">Dores no corpo</td>
+					<td class="td_sint_disp" id="17">MANCHAS NA PELE</td>
+					<td class="td_sint_disp" id="18">Febre moderada</td>
+					<td class="td_sint_disp" id="19">Manchas que coçam</td>
+					<td class="td_sint_disp" id="20">Perda de apetite</td>
+				</tr>
+				<tr>
+					<td class="td_sint_disp" id="21">Dor de ouvido</td>
+					<td class="td_sint_disp" id="22">Dor facial</td>
+					<td class="td_sint_disp" id="23">Congestão nasal</td>
+					<td class="td_sint_disp" id="24">Ardência ao urinar</td>
+					<td class="td_sint_disp" id="25">Urina Espumando</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="simpleModal" class="modal">
+
+		<div class="caixa_alerta">
+			
+			<span id="closeBtn"> &times; </span>
+
+
+			<div class="box box_mod" style="border:1px solid #58CFD2;background-color:#fff">
+					<span class="porcentagem">90%</span>
+					<span class="titulo_doenca titulo_doenca_mod" >Sinusite</span>
+			</div>
+			
+			<br><br><br><br>
+			
+			<p>As chances de você possuir <span style="color:red">Sinusite</span> são altas, não deixe de consultar um médico para obter um diagnostico mais completo e certeiro, para mais informações sobre a doença clique no botão a baixo.</p>
+
+			<button>Mais Informações</button>
+		</div>
+
+	</div>
+
+
+	<script src="js/script_tela_diagnostico.js"></script>
+	<script src="js/script_modal.js"></script>
+
+</body>
+</html>
